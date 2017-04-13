@@ -310,3 +310,6 @@ h2 {
 	padding-bottom: 10px;
 }
 
+#niskiePole .form-control {
+	height: 50px;
+}

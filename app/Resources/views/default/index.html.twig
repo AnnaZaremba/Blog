@@ -1,11 +1,8 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
-    <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Szablon</title>
-
+        <title>Anna Zaremba</title>
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     </head>
     <body>
@@ -23,7 +20,7 @@
                 <li><a href="#">Strona główna</a></li>
                 <li><a href="#">O mnie</a></li>
                 <li><a href="#">Oferta</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="{{ path('kontakt') }}">Kontakt</a></li>
             </ul>
         </div>
         <div id="header">
@@ -31,59 +28,9 @@
                 <h2>Anna Zaremba</h2>
             </div>
         </div>
-        <div id="container">
-            <div class="row">
-                <div id="box_news">
-                    <h2>Ania programuje</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget metus.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget
-                        metus. </p> <br/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget metus.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget
-                        metus. </p>
-                </div>
-                <div id="bar_right">
-                    <h2>Archiwum</h2>
-                    <div id="archiwe">
-                        <p><a href="#">Marzec</a></p>
-                        <p><a href="#">Kwiecień</a></p>
-                    </div>
-                </div>
-            </div>
-            <div id="content_box">
-                <div id="box_content" class="margin2">
-                    <img src="{{ asset('images/jq_logo.png') }}">
-                    <h2>Programowanie</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget metus.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget
-                        metus. </p>
-                </div>
-                <div id="box_content" class="margin4">
-                    <img src="{{ asset('images/jq_logo.png') }}">
-                    <h2>PHP i Symfony</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget metus.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget
-                        metus. </p>
-                </div>
-                <div id="box_content" class="margin4">
-                    <img src="{{ asset('images/jq_logo.png') }}">
-                    <h2>SQL</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget metus.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                        ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget
-                        metus. </p>
-                </div>
-            </div>
-        </div>
+        {% block tresc %}
+            {% include('start.html.twig') %}
+        {% endblock %}
         <div id="footer">
             <p>
             <div class="copyright">Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017</div>

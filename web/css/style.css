@@ -14,7 +14,7 @@ body {
 }
 
 a {
-	color: #c90053;
+	color: #24882d;
 	text-decoration: none;
 }
 
@@ -312,4 +312,8 @@ h2 {
 
 #niskiePole .form-control {
 	height: 50px;
+}
+
+#formularz_kontaktowy h4 {
+	color: #000;
 }

@@ -5,7 +5,7 @@
             <h2>KONTAKT</h2>
             <p> {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
             <div>
-                <div id="formularz_kontaktowy">
+                <div id="formularz">
                     <div>
                         <h4>Imię</h4>
                         {{ form_widget(form.imie, {'attr': {'class': 'form-control'}}) }}
@@ -29,12 +29,4 @@
                 {{ form_end(form) }}
             </div></p>
         </div>
-        <div id="bar_right">
-            <h2>Archiwum</h2>
-            <div id="archiwe">
-                <p><a href="#">Marzec</a></p>
-                <p><a href="#">Kwiecień</a></p>
-            </div>
-        </div>
-    </div>
 {% endblock %}

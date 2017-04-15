@@ -19,6 +19,7 @@
             <li><a href="{{ path('omnie') }}">O mnie</a></li>
             <li><a href="{{ path('notatnik') }}">Notatnik</a></li>
             <li><a href="{{ path('kontakt') }}">Kontakt</a></li>
+            <li><a href="{{ path('admin') }}">Moje konto</a></li>
         </ul>
     </div>
     <div id="header">
@@ -27,14 +28,22 @@
         </div>
     </div>
     <div id="container">
-    {% block container %}
-    {% endblock %}
+        {% block container %}
+        {% endblock %}
+        <div id="bar_right">
+            <h2>Kategorie</h2>
+            <div>
+                <p><a href="#">PHP i Symfony</a></p>
+                <p><a href="#">SQL</a></p>
+                <p><a href="#">Baza danych</a></p>
+            </div>
+        </div>
     </div>
-    <div id="footer">
-        <p>
-        <div class="copyright">Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017</div>
-        </p>
-    </div>
+</div>
+<div id="footer">
+    <p>
+    <div class="copyright">Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017</div>
+    </p>
 </div>
 </body>
 </html>

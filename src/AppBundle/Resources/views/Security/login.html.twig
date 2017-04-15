@@ -1,0 +1,24 @@
+{% extends 'index.html.twig' %}
+{% block container %}
+    <div class="row">
+        <div id="box_news">
+            <h2>LOGOWANIE</h2>
+            {% if error %}
+                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <div id="formularz">
+                <form action="{{ path('login') }}" method="post">
+                    <h4>Nazwa</h4>
+                    <input class="form-control" type="text" id="username" name="_username"/>
+                    <h4>Hasło</h4>
+                    <input class="form-control" type="password" id="password" name="_password"/>
+                    <div>
+                        <h3>
+                            <button type="submit" class="btn btn-primary">Zaloguj</button>
+                        </h3>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

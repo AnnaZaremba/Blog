@@ -1,0 +1,13 @@
+{% extends 'index.html.twig' %}
+{% block container %}
+    <div class="row">
+    <div id="box_news">
+        <h2>Wpis został usunięty. <a href="{{ path('dodajwpis') }}" class="btn btn-primary btn-sm active"
+                                        role="button">Powrót</a></h2>
+        <div>
+            {% block tabelaWpisow %}
+                {% include('tabelaWpisow.html.twig') %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

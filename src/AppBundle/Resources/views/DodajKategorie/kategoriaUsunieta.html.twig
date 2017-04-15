@@ -1,0 +1,35 @@
+{% extends 'index.html.twig' %}
+{% block container %}
+    <div class="row">
+    <div id="box_news">
+        <h2>Kategoria została usunięta.   <a href="{{ path('dodajkategorie') }}" class="btn btn-primary btn-sm active" role="button">Powrót</a></h2>
+        <div class="table-responsive" id="tabela">
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Nazwa</th>
+                    <th>Edycja</th>
+                    <th>Usunięcie</th>
+                </tr>
+                {% for kategoria in kategorie %}
+                    <tr>
+                        <td>{{ kategoria.id }}</td>
+                        <td>{{ kategoria.nazwa|nl2br }}</td>
+                        <td>
+                            <form method="post" action="{{ path('edytujkategorie') }}">
+                                <input type="hidden" name="id" value="{{ kategoria.id }}">
+                                <input type="submit" value="edytuj">
+                            </form>
+                        </td>
+                        <td>
+                            <form method="post" action="{{ path('usunkategorie') }}">
+                                <input type="hidden" name="id" value="{{ kategoria.id }}">
+                                <input type="submit" value="usuń">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

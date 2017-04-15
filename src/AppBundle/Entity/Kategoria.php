@@ -39,7 +39,6 @@ class Kategoria
         $this->wpisy = new ArrayCollection();
     }
 
-
     /**
      * @return mixed
      */
@@ -88,7 +87,7 @@ class Kategoria
         $this->wpisy = $wpisy;
     }
 
-    public function addPwpis(Wpis $wpis)
+    public function addWpis(Wpis $wpis)
     {
         $this->wpisy[] = $wpis;
     }

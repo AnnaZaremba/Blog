@@ -336,3 +336,7 @@ h2 {
 #formularz h4 {
     color: #000;
 }
+
+#tabela tr {
+   color: black;
+}

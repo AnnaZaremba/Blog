@@ -1,0 +1,39 @@
+{% extends 'index.html.twig' %}
+{% block container %}
+    <div class="row">
+        <div id="box_news">
+            <div class="starter-template">
+                <h2>EDYTUJ WPIS</h2>
+                {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
+                <div>
+                    <div class="row" id="formularz">
+                        <div class="col-md-6">
+                            <div>
+                                <h4>Temat</h4>
+                                {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
+                                <div style="color: red; ">{{ form_errors(form.temat) }}</div>
+                            </div>
+                            <h4>Treść</h4>
+                            {{ form_widget(form.tresc, {'attr': {'class': 'form-control'}}) }}
+                            <div style="color: red; ">{{ form_errors(form.tresc) }}</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div><h4>Kategorie</h4>
+                                {{ form_widget(form.kategorie, {'attr': { 'class': 'form-control'}}) }}
+                                <div style="color: red;">{{ form_errors(form.kategorie) }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            <button type="submit" class="btn btn-primary">Edytuj wpis</button>
+                        </h3>
+                    </div>
+                    {{ form_end(form) }}
+                    {% block tabelaWpisow %}
+                        {% include('tabelaWpisow.html.twig') %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -3,6 +3,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Form\Model\Kontakt;
 use AppBundle\Entity\Kontakt as KontaktBaza;
+use AppBundle\Repository\Doctrine\KategoriaRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -57,6 +58,7 @@ class KontaktController extends Controller
             'isValid' => $form->isValid(),
             'kontakt' => $kontakt,
             'find' => $find,
+            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
         );
     }
 
@@ -68,6 +70,8 @@ class KontaktController extends Controller
      */
     public function mailWyslanyAction()
     {
-        return [];
+        return [
+            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
+        ];
     }
 }

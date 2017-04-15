@@ -33,9 +33,13 @@
         <div id="bar_right">
             <h2>Kategorie</h2>
             <div>
-                <p><a href="#">PHP i Symfony</a></p>
-                <p><a href="#">SQL</a></p>
-                <p><a href="#">Baza danych</a></p>
+                <ul class="nav nav-sidebar">
+                    {% for kategoria in kategorie %}
+                        <li>
+                            <a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}">{{ kategoria.nazwa|upper }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>

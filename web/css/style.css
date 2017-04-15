@@ -188,6 +188,13 @@ a:hover {
     margin-right: 25px;
 }
 
+#box_news a {
+    color: #555555;
+    line-height: 23px;
+    text-align: left;
+    font-size: 12px;
+}
+
 #box_sidebar {
     width: 250px;
     float: left;

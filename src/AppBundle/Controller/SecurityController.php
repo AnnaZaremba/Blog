@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Repository\Doctrine\KategoriaRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,6 +25,7 @@ class SecurityController extends Controller
 
         return $this->render('@App/Security/login.html.twig', array(
             'error' => $error,
+            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
         ));
     }
 }

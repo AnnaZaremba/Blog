@@ -1,9 +1,8 @@
-{% extends '::ksiazkakucharska.html.twig' %}
+{% extends 'index.html.twig' %}
 {% block container %}
-    {% block zdjecie %}
-        {% include('::zdjecie.html.twig') %}
-    {% endblock %}
-    <div class="main">
-        <h2>Wiadomość została zapisana w bazie danych.</h2>
+    <div class="row">
+        <div id="box_news">
+            <h2>Wiadomość została wysłana.</h2>
+        </div>
     </div>
 {% endblock %}

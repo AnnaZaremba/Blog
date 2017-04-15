@@ -6,7 +6,7 @@
             <p> {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
             <div>
                 <div id="formularz_kontaktowy">
-                    <div id="niskiePole">
+                    <div>
                         <h4>Imię</h4>
                         {{ form_widget(form.imie, {'attr': {'class': 'form-control'}}) }}
                         <div style="color: red; ">{{ form_errors(form.imie) }}</div>

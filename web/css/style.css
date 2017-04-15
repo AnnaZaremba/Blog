@@ -14,7 +14,7 @@ body {
 }
 
 a {
-    color: #24882d;
+    color: #424242;
     text-decoration: none;
 }
 
@@ -65,7 +65,6 @@ a:hover {
     color: #FFF;
     margin-left: 15px;
     margin-top: 15px;
-
 }
 
 #menu a {
@@ -225,7 +224,6 @@ a:hover {
 h2 {
     font-size: 22px;
     font-weight: normal;
-    color: #24882d;
 }
 
 #content_box {
@@ -295,9 +293,23 @@ h2 {
 #bar_right {
     width: 250px;
     float: right;
-    margin-right: 40px;
+    margin-right: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
+}
+
+#bar_right h2 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #000000;
+}
+
+#bar_right h3 {
+    color: #424242;
+}
+
+#bar_right ul {
+    padding-left: 10px;
 }
 
 #formularz .form-control {
@@ -324,4 +336,3 @@ h2 {
 #formularz h4 {
     color: #000;
 }
-

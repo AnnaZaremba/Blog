@@ -31,12 +31,12 @@
         {% block container %}
         {% endblock %}
         <div id="bar_right">
-            <h2>Kategorie</h2>
+            <h2>KATEGORIE</h2>
             <div>
-                <ul class="nav nav-sidebar">
+                <ul>
                     {% for kategoria in kategorie %}
                         <li>
-                            <a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}">{{ kategoria.nazwa|upper }}</a>
+                            <a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}"><h3>{{ kategoria.nazwa|upper }}</h3></a>
                         </li>
                     {% endfor %}
                 </ul>

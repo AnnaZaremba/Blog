@@ -4,7 +4,7 @@
         <div id="box_news">
             <h2>{{ kategoria.nazwa|upper }} </h2>
             <div>
-                <ul class="list-unstyled">
+                <ul>
                     {% for wpis in wpisy %}
                         <a href="{{ path('wpisid', { 'id': wpis.id }) }}"><h3>{{ wpis.temat }}</h3></a>
                     {% endfor %}

@@ -12,7 +12,6 @@ class KategoriaType extends AbstractType
     {
         $builder
             ->add('id', HiddenType::class)
-            ->add('createat', TextType::class)
             ->add('nazwa', TextType::class)
         ;
     }

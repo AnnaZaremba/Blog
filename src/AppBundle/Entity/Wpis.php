@@ -19,7 +19,7 @@ class Wpis
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $createat;
 
@@ -66,22 +66,6 @@ class Wpis
     /**
      * @return mixed
      */
-    public function getCreateat()
-    {
-        return $this->createat;
-    }
-
-    /**
-     * @param mixed $createat
-     */
-    public function setCreateat($createat)
-    {
-        $this->createat = $createat;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getTemat()
     {
         return $this->temat;
@@ -109,6 +93,22 @@ class Wpis
     public function setTresc($tresc)
     {
         $this->tresc = $tresc;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreateat()
+    {
+        return $this->createat;
+    }
+
+    /**
+     * @param mixed $createat
+     */
+    public function setCreateat($createat)
+    {
+        $this->createat = $createat;
     }
 
     /**

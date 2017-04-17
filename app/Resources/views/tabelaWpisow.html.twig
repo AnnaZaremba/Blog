@@ -3,6 +3,7 @@
     <table class="table table-striped">
         <tr>
             <th width="50">Id</th>
+            <th>Data dodania</th>
             <th>Temat</th>
             <th>Treść</th>
             <th>Kategoria</th>
@@ -12,6 +13,7 @@
         {% for wpis in wpisy %}
             <tr>
                 <td>{{ wpis.id }}</td>
+                <td>{{ wpis.createat }}</td>
                 <td>{{ wpis.temat }}</td>
                 <td>{{ wpis.tresc|nl2br }}</td>
                 <td>

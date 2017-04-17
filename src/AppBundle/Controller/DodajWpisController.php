@@ -32,6 +32,7 @@ class DodajWpisController extends Controller
 
             (new WpisRepository($this->getDoctrine()->getManager()))->save($wpis);
             return $this->redirectToRoute('wpisdodany');
+
         }
 
         $find = $this->getDoctrine()
@@ -104,7 +105,7 @@ class DodajWpisController extends Controller
 
             (new WpisRepository($this->getDoctrine()->getManager()))->update($wpis);
 
-            return $this->render('@App/DodajWpis/WpisZedytowany.html.twig', array(
+            return $this->render('@App/DodajWpis/wpisZedytowany.html.twig', array(
                 'form' => $form->createView(),
                 'isValid' => $form->isValid(),
                 'wpis' => $wpis,

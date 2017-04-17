@@ -10,7 +10,6 @@ class Wpis
 
     /**
      * @var integer
-     * @Assert\NotBlank(message="Pole nie może być puste.")
      */
     private $createat;
 

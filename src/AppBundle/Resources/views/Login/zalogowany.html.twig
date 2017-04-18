@@ -1,17 +1,17 @@
 {% extends 'index.html.twig' %}
 {% block container %}
     <div class="row">
-        <div id="box_news">
+        <div class="col-lg-8" id="box_news">
             <h2>PANEL UŻYTKOWNIKA</h2>
             <div>
                 <div>
                     <h3>
-                        <a href="{{ path('dodajkategorie') }}">Dodaj kategorię</a>
+                        <a href="{{ path('dodajkategorie') }}">Kategorie</a>
                     </h3>
                 </div>
                 <div>
                     <h3>
-                        <a href="{{ path('dodajwpis') }}">Dodaj wpis</a>
+                        <a href="{{ path('dodajwpis') }}">Wpisy</a>
                     </h3>
                 </div>
                 <div>
@@ -21,4 +21,8 @@
                 </div>
             </div>
         </div>
+        {% block menu %}
+            {% include('menu.html.twig') %}
+        {% endblock %}
+    </div>
 {% endblock %}

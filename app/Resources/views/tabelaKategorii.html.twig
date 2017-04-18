@@ -1,0 +1,30 @@
+{% block tabelaKategorii %}
+<div class="row">
+    <table class="table" id="tabela">
+        <tr>
+            <th>Id</th>
+            <th>Nazwa</th>
+            <th>Edycja</th>
+            <th>Usunięcie</th>
+        </tr>
+        {% for kategoria in kategorie %}
+            <tr>
+                <td>{{ kategoria.id }}</td>
+                <td>{{ kategoria.nazwa }}</td>
+                <td>
+                    <form method="post" action="{{ path('edytujkategorie') }}">
+                        <input type="hidden" name="id" value="{{ kategoria.id }}">
+                        <input type="submit" class="btn btn-default btn-sm" id="btn-blog" value="edytuj">
+                    </form>
+                </td>
+                <td>
+                    <form method="post" action="{{ path('usunkategorie') }}">
+                        <input type="hidden" name="id" value="{{ kategoria.id }}">
+                        <input type="submit" class="btn btn-default btn-sm" id="btn-blog" value="usuń">
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

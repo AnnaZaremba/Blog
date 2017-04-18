@@ -1,6 +1,6 @@
 {% block tabelaWpisow %}
-<div class="table-responsive" id="tabela">
-    <table class="table table-striped">
+<div>
+    <table class="table">
         <tr>
             <th width="50">Id</th>
             <th>Data dodania</th>
@@ -13,7 +13,7 @@
         {% for wpis in wpisy %}
             <tr>
                 <td>{{ wpis.id }}</td>
-                <td>{{ wpis.createat }}</td>
+                <td>{{ wpis.createat|date('Y-m-d H:i:s') }}</td>
                 <td>{{ wpis.temat }}</td>
                 <td>{{ wpis.tresc|nl2br }}</td>
                 <td>
@@ -24,13 +24,13 @@
                 <td>
                     <form method="post" action="{{ path('edytujwpis') }}">
                         <input type="hidden" name="id" value="{{ wpis.id }}">
-                        <input type="submit" class="btn btn-primary btn-sm" value="edytuj">
+                        <input type="submit" class="btn btn-default btn-smm" value="edytuj">
                     </form>
                 </td>
                 <td>
                     <form method="post" action="{{ path('usunwpis') }}">
                         <input type="hidden" name="id" value="{{ wpis.id }}">
-                        <input type="submit" class="btn btn-primary btn-sm" value="usuń">
+                        <input type="submit" class="btn btn-default btn-sm" value="usuń">
                     </form>
                 </td>
             </tr>

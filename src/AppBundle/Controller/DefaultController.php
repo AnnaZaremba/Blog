@@ -19,6 +19,7 @@ class DefaultController extends Controller
     {
         return [
             'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
+            'wpis' => (new WpisRepository($this->getDoctrine()->getManager()))->getLast(),
         ];
     }
 
@@ -45,17 +46,4 @@ class DefaultController extends Controller
             'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
         ];
     }
-
-    /**
-     * @Route("/notatnik", name="notatnik")
-     * @Template()
-     */
-    public function notatnikAction(Request $request)
-    {
-        return [
-            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-            'wpis' => (new WpisRepository($this->getDoctrine()->getManager()))->getLast(),
-        ];
-    }
-
 }

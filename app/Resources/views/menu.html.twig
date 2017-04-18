@@ -1,0 +1,12 @@
+{% block menu %}
+<div class="col-lg-4" id="bar_right">
+    <h2>KATEGORIE</h2>
+    <div>
+        <ul>
+            {% for kategoria in kategorie %}
+                <a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}"><h3>{{ kategoria.nazwa|upper }}</h3></a>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

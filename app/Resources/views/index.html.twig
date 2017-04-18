@@ -2,9 +2,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Anna Zaremba</title>
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/bootstrap/3.3.7/css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 <body>
-<div id="wrapper">
+<div class="row" id="wrapper">
     <div id="logo">
         <a href="{{ path('homepage') }}">
             <h2>Anna Zaremba</h2>
@@ -17,7 +18,6 @@
         <ul>
             <li><a href="{{ path('homepage') }}">Strona główna</a></li>
             <li><a href="{{ path('omnie') }}">O mnie</a></li>
-            <li><a href="{{ path('notatnik') }}">Notatnik</a></li>
             <li><a href="{{ path('kontakt') }}">Kontakt</a></li>
             <li><a href="{{ path('admin') }}">Moje konto</a></li>
         </ul>
@@ -27,27 +27,13 @@
             <h2>Anna Zaremba</h2>
         </div>
     </div>
-    <div id="container">
-        {% block container %}
-        {% endblock %}
-        <div id="bar_right">
-            <h2>KATEGORIE</h2>
-            <div>
-                <ul>
-                    {% for kategoria in kategorie %}
-                        <li>
-                            <a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}"><h3>{{ kategoria.nazwa|upper }}</h3></a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </div>
+    {% block container %}
+    {% endblock %}
 </div>
+</body>
 <div id="footer">
     <p>
     <div class="copyright">Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017</div>
     </p>
 </div>
-</body>
 </html>

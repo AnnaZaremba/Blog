@@ -2,7 +2,8 @@ body {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #F1F1F1;
-    background: #CCC url(../images/bg.jpg) no-repeat top;
+    background: #CCC url(../images/bg.jpg) no-repeat fixed;
+    background-size: cover;
     text-align: center;
     margin: 0;
 }
@@ -11,6 +12,7 @@ body {
     width: 945px;
     margin: 0 auto;
     text-align: left;
+    background: #FFF;
 }
 
 a {
@@ -45,7 +47,7 @@ a:hover {
 }
 
 #menu {
-    width: 960px;
+    width: 100%;
     height: 80px;
     float: left;
     background: #FFF;
@@ -99,9 +101,9 @@ a:hover {
 
 #header {
     float: left;
-    width: 960px;
+    width: 100%;
     height: 357px;
-    background: url(../images/panorama.jpg) no-repeat;
+    background: url(../images/panorama_gory.jpg) no-repeat;
 }
 
 #title_head {
@@ -161,7 +163,7 @@ a:hover {
 
 #box_news {
     float: left;
-    width: 530px;
+    width: 600px;
     padding: 5px;
     margin-left: 30px;
     font-family: Arial;
@@ -191,7 +193,7 @@ a:hover {
     color: #555555;
     line-height: 23px;
     text-align: left;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 #box_sidebar {
@@ -279,7 +281,6 @@ h2 {
 
 #footer {
     width: 900px;
-    float: left;
     font-size: 12px;
     margin: 0 auto;
     color: #000;
@@ -305,6 +306,11 @@ h2 {
 }
 
 #bar_right h3 {
+    color: #424242;
+    font-size: 15px;
+}
+
+#bar_right h4 {
     color: #424242;
 }
 
@@ -335,8 +341,4 @@ h2 {
 
 #formularz h4 {
     color: #000;
-}
-
-#tabela tr {
-   color: black;
 }

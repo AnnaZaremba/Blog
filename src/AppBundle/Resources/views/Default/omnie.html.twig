@@ -1,9 +1,13 @@
 {% extends 'index.html.twig' %}
 {% block container %}
     <div class="row">
-        <div id="box_news">
+        <div class="col-lg-8" id="box_news">
             <h2>O MNIE</h2>
             <p>Parampa pam </p> <br/>
             <p>Lalalala lallala </p>
         </div>
+        {% block menu %}
+            {% include('menu.html.twig') %}
+        {% endblock %}
+    </div>
 {% endblock %}

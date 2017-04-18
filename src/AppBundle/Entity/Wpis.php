@@ -19,9 +19,16 @@ class Wpis
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="datetime")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $createat;
+
+    /**
+     * @ORM\Column(type="string")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $lastmodify;
 
     /**
      * @ORM\Column(type="string")
@@ -66,6 +73,22 @@ class Wpis
     /**
      * @return mixed
      */
+    public function getCreateat()
+    {
+        return $this->createat;
+    }
+
+    /**
+     * @param mixed $createat
+     */
+    public function setCreateat($createat)
+    {
+        $this->createat = $createat;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getTemat()
     {
         return $this->temat;
@@ -98,17 +121,17 @@ class Wpis
     /**
      * @return mixed
      */
-    public function getCreateat()
+    public function getLastmodify()
     {
-        return $this->createat;
+        return $this->lastmodify;
     }
 
     /**
-     * @param mixed $createat
+     * @param mixed $lastmodify
      */
-    public function setCreateat($createat)
+    public function setLastmodify($lastmodify)
     {
-        $this->createat = $createat;
+        $this->lastmodify = $lastmodify;
     }
 
     /**

@@ -1,7 +1,7 @@
 {% extends 'index.html.twig' %}
 {% block container %}
     <div class="row">
-        <div id="box_news">
+        <div class="col-lg-8" id="box_news">
             <h2>KONTAKT</h2>
             <p> {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
             <div>
@@ -23,10 +23,15 @@
                 </div>
                 <div>
                     <h3>
-                        <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+                        <button type="submit" class="btn btn-default btn-sm">Wyślij wiadomość</button>
                     </h3>
                 </div>
                 {{ form_end(form) }}
-            </div></p>
+            </div>
+            </p>
         </div>
+        {% block menu %}
+            {% include('menu.html.twig') %}
+        {% endblock %}
+    </div>
 {% endblock %}

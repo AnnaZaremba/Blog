@@ -9,11 +9,6 @@ class Wpis
     private $id;
 
     /**
-     * @var integer
-     */
-    private $createat;
-
-    /**
      * @var string
      * @Assert\NotBlank(message="Pole nie może być puste.")
      */
@@ -44,22 +39,6 @@ class Wpis
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCreateat()
-    {
-        return $this->createat;
-    }
-
-    /**
-     * @param int $createat
-     */
-    public function setCreateat($createat)
-    {
-        $this->createat = $createat;
     }
 
     /**

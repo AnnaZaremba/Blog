@@ -1,17 +1,12 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-        <div class="row">
-            <div id="box_news">
-                <h2>ANIA PROGRAMUJE</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                    ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget metus.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                    ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget
-                    metus. </p> <br/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                    ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget metus.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget tortor vitae purus bibendum
-                    ornare at sit amet mauris. Cras ac erat eget urna faucibus pellentesque sit amet eget
-                    metus. </p>
-            </div>
+    <div class="row">
+        <div class="col-lg-8" id="box_news">
+            <h2>{{ wpis.temat|upper }}</h2>
+            <p>{{ wpis.tresc|nl2br }}</p>
+        </div>
+        {% block menu %}
+            {% include('menu.html.twig') %}
+        {% endblock %}
+    </div>
 {% endblock %}

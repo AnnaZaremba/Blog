@@ -41,7 +41,6 @@ class WpisRepository extends DoctrineRepository
         $wpisBaza = new WpisEntity();
         $wpisBaza->setTemat($wpis->getTemat());
         $wpisBaza->setTresc($wpis->getTresc());
-
         /** @var Kategoria $kategoria */
         foreach ($wpis->getKategorie() as $kategoria) {
             $wpisBaza->addKategoria($kategoria);

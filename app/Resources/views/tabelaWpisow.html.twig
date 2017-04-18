@@ -15,7 +15,7 @@
                 <td>{{ wpis.id }}</td>
                 <td>{{ wpis.createat|date('Y-m-d H:i:s') }}</td>
                 <td>{{ wpis.temat }}</td>
-                <td>{{ wpis.tresc|nl2br }}</td>
+                <td>{{ wpis.tresc|raw }}</td>
                 <td>
                     {% for kategoria in wpis.kategorie %}
                         <div>{{ kategoria.nazwa }}</div>

@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-8" id="box_news">
             <h2>{{ wpis.temat|upper }}</h2>
-            <p>{{ wpis.tresc|nl2br }}</p>
+            <div>{{ wpis.tresc|raw }}</div>
         </div>
         {% block menu %}
             {% include('menu.html.twig') %}

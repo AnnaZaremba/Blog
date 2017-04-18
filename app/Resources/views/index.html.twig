@@ -6,11 +6,6 @@
 </head>
 <body>
 <div class="row" id="wrapper">
-    <div id="logo">
-        <a href="{{ path('homepage') }}">
-            <h2>Anna Zaremba</h2>
-        </a>
-    </div>
     <div id="menu">
         <div id="search_top">
             <input type="text" size="30"/>
@@ -24,7 +19,9 @@
     </div>
     <div id="header">
         <div id="title_head">
+            <a href="{{ path('homepage') }}">
             <h2>Anna Zaremba</h2>
+            </a>
         </div>
     </div>
     {% block container %}

@@ -29,9 +29,11 @@ a:hover {
 }
 
 #logo {
-    float: left;
     padding-top: 20px;
+    margin-top: 50px;
+    float: right;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 #logo h2 {
@@ -130,7 +132,7 @@ a:hover {
 
 #title_head a {
     padding: 5px;
-    background: #C9C9C9;
+
     color: #444;
 }
 

@@ -1,11 +1,15 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div class="row">
-    <div class="col-lg-8" id="box_news">
-        <h2>Wpis został usunięty. <a href="{{ path('dodajwpis') }}" class="btn btn-default btn-xs"
-                                     role="button">Powrót</a></h2>
+    <div id="box_news">
+        <div>
+            <h2>
+                Wpis został usunięty
+            </h2>
+        </div>
+        <div id="button">
+            <h3>
+                <a href="{{ path('dodajwpis') }}" class="btn btn-default btn-xs" role="button">Powrót</a>
+            </h3>
+        </div>
     </div>
-    {% block menu %}
-        {% include('menu.html.twig') %}
-    {% endblock %}
 {% endblock %}

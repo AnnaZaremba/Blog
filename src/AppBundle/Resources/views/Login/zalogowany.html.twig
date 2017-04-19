@@ -1,28 +1,17 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div class="row">
-        <div class="col-lg-8" id="box_news">
-            <h2>PANEL UŻYTKOWNIKA</h2>
+    <div id="box_news">
+        <h2>panel użytkownika</h2>
+        <div>
             <div>
-                <div>
-                    <h3>
-                        <a href="{{ path('dodajkategorie') }}">Kategorie</a>
-                    </h3>
-                </div>
-                <div>
-                    <h3>
-                        <a href="{{ path('dodajwpis') }}">Wpisy</a>
-                    </h3>
-                </div>
-                <div>
-                    <h3>
-                        <a href="{{ path('logout') }}">Wyloguj</a>
-                    </h3>
-                </div>
+                <a href="{{ path('dodajkategorie') }}">Kategorie</a>
+            </div>
+            <div>
+                <a href="{{ path('dodajwpis') }}">Wpisy</a>
+            </div>
+            <div>
+                <a href="{{ path('logout') }}">Wyloguj</a>
             </div>
         </div>
-        {% block menu %}
-            {% include('menu.html.twig') %}
-        {% endblock %}
     </div>
 {% endblock %}

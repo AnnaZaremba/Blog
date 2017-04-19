@@ -1,10 +1,11 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div class="col-lg-8" id="box_news">
-        <h2>{{ wpis.temat|upper }}</h2>
-        <p>{{ wpis.tresc|nl2br }}</p>
+    <div id="box_news">
+        <div>
+            <h2>{{ wpis.temat }}</h2>
+        </div>
+        <div>
+            <h4>{{ wpis.tresc|raw }}</h4>
+        </div>
     </div>
-    {% block menu %}
-        {% include('menu.html.twig') %}
-    {% endblock %}
 {% endblock %}

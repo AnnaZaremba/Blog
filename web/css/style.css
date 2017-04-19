@@ -1,11 +1,11 @@
 body {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #F1F1F1;
     background: #CCC url(../images/bg.jpg) no-repeat fixed;
     background-size: cover;
     text-align: center;
     margin: 0;
+    font-family: Arial;
 }
 
 #wrapper {
@@ -65,7 +65,6 @@ a:hover {
 #menu li {
     display: block;
     float: left;
-    font-family: Arial;
     color: #FFF;
     margin-left: 15px;
     margin-top: 15px;
@@ -121,7 +120,6 @@ a:hover {
     font-size: 28px;
     font-weight: normal;
     text-transform: uppercase;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 #title_head p {
@@ -168,21 +166,28 @@ a:hover {
     width: 600px;
     padding: 5px;
     margin-left: 30px;
-    font-family: Arial;
-
 }
 
-#box_news h2, #box_sidebar h2 {
+#box_news h2 {
     font-size: 22px;
-    text-transform: none;
+    text-transform: uppercase;
     color: #000;
 }
 
-#box_news p, #box_sidebar p {
-    color: #777;
+#box_news h3 {
+    font-size: 17px;
+    text-transform: none;
     line-height: 23px;
     text-align: left;
+    color: #777;
+}
+
+#box_news h4 {
     font-size: 12px;
+    text-transform: none;
+    line-height: 23px;
+    text-align: left;
+    color: #777;
 }
 
 #box_news img {
@@ -192,10 +197,11 @@ a:hover {
 }
 
 #box_news a {
-    color: #555555;
-    line-height: 23px;
+    font-size: 17px;
+    text-transform: none;
+    line-height: 30px;
     text-align: left;
-    font-size: 15px;
+    color: #777;
 }
 
 #box_sidebar {
@@ -241,16 +247,8 @@ h2 {
 #content_box h2 {
     font-size: 18px;
     font-weight: normal;
-    font-family: "Trebuchet MS", Tahoma, Arial, Helvetica, Sans-serif;
     color: #FFF;
     padding: 0 0 5px 0;
-}
-
-#content_box p {
-    font-family: Arial;
-    font-size: 12px;
-    line-height: 22px;
-    color: #777;
 }
 
 #content_box a {
@@ -268,7 +266,7 @@ h2 {
 
 #box_content {
     width: 260px;
-    float: left
+    float: left;
 }
 
 #box_content img {
@@ -321,26 +319,36 @@ h2 {
 }
 
 #formularz .form-control {
-    display: block;
-    width: 500px;
     height: 50px;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: large;
-    line-height: normal;
-    color: dimgrey;
-    background-color: white;
-    border: 1px solid;
-    border-radius: 5px;
-. box-shadow(inset 0 1 px 1 px rgba(0, 0, 0, .075));
-. transition(~ "border-color ease-in-out .15s, box-shadow ease-in-out .15s");
 }
 
-#formularz textarea.form-control {
-    height: 50px;
-    width: 500px;
+#formularz h3 {
+    font-size: 17px;
+    text-transform: none;
+    color: #424242;
 }
 
-#formularz h4 {
-    color: #000;
+#button .btn-default {
+    color: #ffffff;
+    background-color: #2a4039;
+    border-color: #3c3c3c;
+    line-height: 23px;
+}
+
+#button .btn-default:hover {
+    color: #ffffff;
+    background-color: #37534a;
+    border-color: #3c3c3c;
+}
+
+#blad {
+    color: #aa0000;
+}
+
+#tabela {
+    float: left;
+    margin-left: 30px;
+    margin-top: 40px;
+    width: 90%;
+    padding: 5px;
 }

@@ -1,16 +1,15 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div class="row">
-        <div class="col-lg-8" id="box_news">
-            <h2>{{ kategoria.nazwa|upper }} </h2>
-            <ul>
+    <div id="box_news">
+        <div>
+            <h2>{{ kategoria.nazwa }} </h2>
+        </div>
+        <div>
+            <h3>
                 {% for wpis in wpisy %}
                     <a href="{{ path('wpisid', { 'id': wpis.id }) }}"><h4>{{ wpis.temat }}</h4></a>
                 {% endfor %}
-            </ul>
+            </h3>
         </div>
-        {% block menu %}
-            {% include('menu.html.twig') %}
-        {% endblock %}
     </div>
 {% endblock %}

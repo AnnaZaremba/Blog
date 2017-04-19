@@ -1,5 +1,5 @@
 {% block tabelaWpisow %}
-<div>
+<div id="tabela">
     <table class="table">
         <tr>
             <th width="50">Id</th>
@@ -11,7 +11,7 @@
             <th>Usunięcie</th>
         </tr>
         {% for wpis in wpisy %}
-            <tr>
+            <tr id="button">
                 <td>{{ wpis.id }}</td>
                 <td>{{ wpis.createat|date('Y-m-d H:i:s') }}</td>
                 <td>{{ wpis.temat }}</td>
@@ -24,13 +24,13 @@
                 <td>
                     <form method="post" action="{{ path('edytujwpis') }}">
                         <input type="hidden" name="id" value="{{ wpis.id }}">
-                        <input type="submit" class="btn btn-default btn-smm" value="edytuj">
+                        <button type="submit" class="btn btn-default btn-sm">Edytuj</button>
                     </form>
                 </td>
                 <td>
                     <form method="post" action="{{ path('usunwpis') }}">
                         <input type="hidden" name="id" value="{{ wpis.id }}">
-                        <input type="submit" class="btn btn-default btn-sm" value="usuń">
+                        <button type="submit" class="btn btn-default btn-sm">Usuń</button>
                     </form>
                 </td>
             </tr>

@@ -20,17 +20,24 @@
     <div id="header">
         <div id="title_head">
             <a href="{{ path('homepage') }}">
-            <h2>Anna Zaremba</h2>
+                <h2>Anna Zaremba</h2>
             </a>
         </div>
     </div>
-    {% block container %}
-    {% endblock %}
+    <div class="row">
+        <div class="col-lg-8">
+            {% block container %}{% endblock %}
+        </div>
+        <div class="col-lg-4">
+            {% block menu %}
+                {% include('menu.html.twig') %}
+            {% endblock %}
+        </div>
+    </div>
+    {% block bottomContainer %}{% endblock %}
 </div>
 </body>
 <div id="footer">
-    <p>
     <div class="copyright">Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017</div>
-    </p>
 </div>
 </html>

@@ -1,15 +1,15 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div class="row">
-        <div class="col-lg-8" id="box_news">
-            <div>
-                <h2>Kategoria została dodana. <a href="{{ path('dodajkategorie') }}"
-                                                 class="btn btn-default btn-xs"
-                                                 role="button">Powrót</a></h2>
-            </div>
+    <div id="box_news">
+        <div>
+            <h2>
+                Kategoria została dodana
+            </h2>
         </div>
-        {% block menu %}
-            {% include('menu.html.twig') %}
-        {% endblock %}
+        <div id="button">
+            <h3>
+            <a href="{{ path('dodajkategorie') }}" class="btn btn-default btn-xs" role="button">Powrót</a>
+            </h3>
+        </div>
     </div>
 {% endblock %}

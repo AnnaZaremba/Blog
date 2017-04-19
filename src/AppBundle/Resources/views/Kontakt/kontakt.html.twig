@@ -1,37 +1,33 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div class="row">
-        <div class="col-lg-8" id="box_news">
-            <h2>KONTAKT</h2>
-            <p> {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-            <div>
-                <div id="formularz">
-                    <div>
-                        <h4>Imię</h4>
-                        {{ form_widget(form.imie, {'attr': {'class': 'form-control'}}) }}
-                        <div style="color: red; ">{{ form_errors(form.imie) }}</div>
-                        <h4>E-mail</h4>
-                        {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
-                        <div style="color: red; ">{{ form_errors(form.email) }}</div>
-                        <h4>Temat</h4>
-                        {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
-                        <div style="color: red; ">{{ form_errors(form.temat) }}</div>
-                    </div>
-                    <h4>Wiadomość</h4>
-                    {{ form_widget(form.wiadomosc, {'attr': {'class': 'form-control'}}) }}
-                    <div style="color: red; ">{{ form_errors(form.wiadomosc) }}</div>
+    <div id="box_news">
+        <h2>kontakt</h2>
+        {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
+        <div>
+            <div id="formularz">
+                <div>
+                    <h3>Imię</h3>
+                    {{ form_widget(form.imie, {'attr': {'class': 'form-control'}}) }}
+                    <div id="blad">{{ form_errors(form.imie) }}</div>
+                    <h3>E-mail</h3>
+                    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                    <div id="blad">{{ form_errors(form.email) }}</div>
+                    <h3>Temat</h3>
+                    {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
+                    <div id="blad">{{ form_errors(form.temat) }}</div>
                 </div>
                 <div>
-                    <h3>
-                        <button type="submit" class="btn btn-default btn-sm">Wyślij wiadomość</button>
-                    </h3>
+                    <h3>Wiadomość</h3>
+                    {{ form_widget(form.wiadomosc, {'attr': {'class': 'form-control'}}) }}
+                    <div id="blad">{{ form_errors(form.wiadomosc) }}</div>
                 </div>
-                {{ form_end(form) }}
             </div>
-            </p>
+            <div id="button">
+                <h3>
+                    <button type="submit" class="btn btn-default btn-sm">Wyślij wiadomość</button>
+                </h3>
+            </div>
+            {{ form_end(form) }}
         </div>
-        {% block menu %}
-            {% include('menu.html.twig') %}
-        {% endblock %}
     </div>
 {% endblock %}

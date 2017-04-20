@@ -49,17 +49,11 @@ class DodajWpisController extends Controller
     }
 
     /**
-     * @return array
-     *
      * @Route("/wpisdodany", name="wpisdodany")
-     * @Template()
      */
     public function wpisDodanyAction()
     {
-        return [
-            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-            'wpisy' => (new WpisRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-        ];
+        return $this->redirectToRoute('dodajwpis');
     }
 
     /**
@@ -71,10 +65,7 @@ class DodajWpisController extends Controller
 
         (new WpisRepository($this->getDoctrine()->getManager()))->delete($id);
 
-        return $this->render('@App/DodajWpis/wpisUsuniety.html.twig', array(
-            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-            'wpisy' => (new WpisRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-        ));
+        return $this->redirectToRoute('dodajwpis');
     }
 
     /**
@@ -105,13 +96,7 @@ class DodajWpisController extends Controller
 
             (new WpisRepository($this->getDoctrine()->getManager()))->update($wpis);
 
-            return $this->render('@App/DodajWpis/wpisZedytowany.html.twig', array(
-                'form' => $form->createView(),
-                'isValid' => $form->isValid(),
-                'wpis' => $wpis,
-                'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-                'wpisy' => (new WpisRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-            ));
+            return $this->redirectToRoute('dodajwpis');
         }
 
         $dane = $this->getDoctrine()

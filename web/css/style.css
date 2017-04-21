@@ -328,6 +328,19 @@ h2 {
     color: #424242;
 }
 
+#dodajWpisKategorie .form-control {
+    height: auto;
+    text-align: center;
+}
+
+#dodajWpisKategorie label {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
 #button .btn-default {
     color: #ffffff;
     background-color: #2a4039;
@@ -348,7 +361,7 @@ h2 {
 #tabela {
     float: left;
     margin-left: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 90%;
     padding: 5px;
 }

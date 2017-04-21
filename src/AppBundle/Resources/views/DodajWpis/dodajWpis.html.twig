@@ -5,18 +5,18 @@
         <h2>Dodaj wpis</h2>
         {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
         <div>
-            <div id="formularz">
-                <div>
+            <div>
+                <div id="formularz">
                     <h3>Temat</h3>
                     {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
                     <div id="blad">{{ form_errors(form.temat) }}</div>
                 </div>
-                <div>
+                <div id="formularz">
                     <h3>Treść</h3>
                     {{ form_widget(form.tresc, {'attr': {'class': 'form-control tinymce'}}) }}
                     <div id="blad">{{ form_errors(form.tresc) }}</div>
                 </div>
-                <div>
+                <div id="dodajWpisKategorie">
                     <h3>Kategorie</h3>
                     {{ form_widget(form.kategorie, {'attr': { 'class': 'form-control'}}) }}
                     <div id="blad">{{ form_errors(form.kategorie) }}</div>

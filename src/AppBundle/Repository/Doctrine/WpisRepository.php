@@ -29,14 +29,9 @@ class WpisRepository extends DoctrineRepository
             ->findOneBy([], ['id' => 'DESC']);
     }
 
-    protected function getEntityClassName()
-    {
-        return 'AppBundle:Wpis';
-    }
-
     public function save(Wpis $wpis)
     {
-        $em = $this->getEntityManager();
+//        $em = $this->getEntityManager();
 
         $wpisBaza = new WpisEntity();
         $wpisBaza->setTemat($wpis->getTemat());
@@ -46,8 +41,8 @@ class WpisRepository extends DoctrineRepository
             $wpisBaza->addKategoria($kategoria);
         }
 
-        $em->persist($wpisBaza);
-        $em->flush();
+        $this->_em->persist($wpisBaza);
+        $this->_em->flush();
     }
 
     public function update(Wpis $wpis)
@@ -78,5 +73,10 @@ class WpisRepository extends DoctrineRepository
         $em = $this->getEntityManager();
         $em->remove($wpisBaza);
         $em->flush();
+    }
+
+    protected function getEntityClassName()
+    {
+        return 'AppBundle:Wpis';
     }
 }

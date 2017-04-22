@@ -7,32 +7,54 @@ use AppBundle\Repository\Doctrine\WpisRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * @Route(service="app.default_controller")
+ */
 class DefaultController extends Controller
 {
+    /** @var KategoriaRepository */
+    private $kategoriaRepository;
+
+    /** @var WpisRepository */
+    private $wpisRepository;
+
+    /**
+     * @param KategoriaRepository $kategoriaRepository
+     * @param WpisRepository $wpisRepository
+     */
+    public function __construct(KategoriaRepository $kategoriaRepository, WpisRepository $wpisRepository)
+    {
+        $this->kategoriaRepository = $kategoriaRepository;
+        $this->wpisRepository = $wpisRepository;
+    }
+
     /**
      * @Route("/", name="homepage")
      * @Template()
+     * @return array
      */
-    public function startAction(Request $request)
+    public function startAction()
     {
         return [
-            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-            'wpis' => (new WpisRepository($this->getDoctrine()->getManager()))->getLast(),
+            'kategorie' => $this->kategoriaRepository->getAllOrderByName(),
+            'wpis' => $this->wpisRepository->getLast(),
         ];
     }
 
     /**
      * @Route("/{id}", name="wpisid", requirements={"id": "\d+"})
      * @Template()
+     *
+     * @param int $id
+     * @return array
      */
     public function findAction($id)
     {
         return [
-            'wpis' => (new WpisRepository($this->getDoctrine()->getManager()))->getOneById($id),
-            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-            'wpisy' => (new WpisRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
+            'wpis' => $this->wpisRepository->getOneById($id),
+            'kategorie' => $this->kategoriaRepository->getAllOrderByName(),
+            'wpisy' => $this->wpisRepository->getAllOrderByName(),
         ];
     }
 
@@ -40,10 +62,10 @@ class DefaultController extends Controller
      * @Route("/omnie", name="omnie")
      * @Template()
      */
-    public function omnieAction(Request $request)
+    public function omnieAction()
     {
         return [
-            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
+            'kategorie' => $this->kategoriaRepository->getAllOrderByName(),
         ];
     }
 }

@@ -15,12 +15,31 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Class DodajWpisController
  * @package AppBundle\Controller
+ * @Route(service="app.dodaj_wpis_controller")
  */
 class DodajWpisController extends Controller
 {
+    /** @var KategoriaRepository */
+    private $kategoriaRepository;
+
+    /** @var WpisRepository */
+    private $wpisRepository;
+
+    /**
+     * @param KategoriaRepository $kategoriaRepository
+     * @param WpisRepository $wpisRepository
+     */
+    public function __construct(KategoriaRepository $kategoriaRepository, WpisRepository $wpisRepository)
+    {
+        $this->kategoriaRepository = $kategoriaRepository;
+        $this->wpisRepository = $wpisRepository;
+    }
+
     /**
      * @Route("/dodajwpis", name="dodajwpis")
      * @Template()
+     * @param Request $request
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function dodajWpisAction(Request $request)
     {
@@ -30,7 +49,7 @@ class DodajWpisController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            (new WpisRepository($this->getDoctrine()->getManager()))->save($wpis);
+            $this->wpisRepository->save($wpis);
             return $this->redirectToRoute('wpisdodany');
 
         }
@@ -43,8 +62,8 @@ class DodajWpisController extends Controller
             'form' => $form->createView(),
             'wpis' => $wpis,
             'find' => $find,
-            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-            'wpisy' => (new WpisRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
+            'kategorie' => $this->kategoriaRepository->getAllOrderByName(),
+            'wpisy' => $this->wpisRepository->getAllOrderByName(),
         );
     }
 
@@ -58,18 +77,22 @@ class DodajWpisController extends Controller
 
     /**
      * @Route("/usunwpis", name="usunwpis")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function deleteAction(Request $request)
     {
         $id = $request->get('id');
 
-        (new WpisRepository($this->getDoctrine()->getManager()))->delete($id);
+        $this->wpisRepository->delete($id);
 
         return $this->redirectToRoute('dodajwpis');
     }
 
     /**
      * @Route("/edytujwpis", name="edytujwpis")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function editAction(Request $request)
     {
@@ -94,7 +117,7 @@ class DodajWpisController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            (new WpisRepository($this->getDoctrine()->getManager()))->update($wpis);
+            $this->wpisRepository->update($wpis);
 
             return $this->redirectToRoute('dodajwpis');
         }
@@ -108,8 +131,8 @@ class DodajWpisController extends Controller
             'isValid' => $form->isValid(),
             'wpis' => $wpis,
             'dane' => $dane,
-            'kategorie' => (new KategoriaRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
-            'wpisy' => (new WpisRepository($this->getDoctrine()->getManager()))->getAllOrderByName(),
+            'kategorie' => $this->kategoriaRepository->getAllOrderByName(),
+            'wpisy' => $this->wpisRepository->getAllOrderByName(),
         ));
     }
 }

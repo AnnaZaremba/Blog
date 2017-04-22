@@ -27,11 +27,6 @@ class KategoriaRepository extends DoctrineRepository
             ->find($id);
     }
 
-    protected function getEntityClassName()
-    {
-        return 'AppBundle:Kategoria';
-    }
-
     public function save(\AppBundle\Form\Model\Kategoria $kategoria)
     {
         $em = $this->getEntityManager();
@@ -62,5 +57,10 @@ class KategoriaRepository extends DoctrineRepository
         $em = $this->getEntityManager();
         $em->remove($kategoriaBaza);
         $em->flush();
+    }
+
+    protected function getEntityClassName()
+    {
+        return 'AppBundle:Kategoria';
     }
 }

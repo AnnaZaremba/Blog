@@ -25,16 +25,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-8">
-            {% block container %}{% endblock %}
-        </div>
-        <div class="col-lg-4">
-            {% block menu %}
-                {% include('menu.html.twig') %}
-            {% endblock %}
-        </div>
+        {% block container %}{% endblock %}
     </div>
-    {% block bottomContainer %}{% endblock %}
 </div>
 </body>
 <div id="footer">

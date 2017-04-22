@@ -1,40 +1,40 @@
 {% block tabelaWpisow %}
-<div id="tabela">
-    <table class="table">
-        <tr>
-            <th width="50">Id</th>
-            <th>Data dodania</th>
-            <th>Temat</th>
-            <th>Treść</th>
-            <th>Kategoria</th>
-            <th>Edycja</th>
-            <th>Usunięcie</th>
-        </tr>
-        {% for wpis in wpisy %}
-            <tr id="button">
-                <td>{{ wpis.id }}</td>
-                <td>{{ wpis.createat|date('Y-m-d H:i:s') }}</td>
-                <td>{{ wpis.temat }}</td>
-                <td>{{ wpis.tresc|raw }}</td>
-                <td>
-                    {% for kategoria in wpis.kategorie %}
-                        <div>{{ kategoria.nazwa }}</div>
-                    {% endfor %}
-                </td>
-                <td>
-                    <form method="post" action="{{ path('edytujwpis') }}">
-                        <input type="hidden" name="id" value="{{ wpis.id }}">
-                        <button type="submit" class="btn btn-default btn-sm">Edytuj</button>
-                    </form>
-                </td>
-                <td>
-                    <form method="post" action="{{ path('usunwpis') }}">
-                        <input type="hidden" name="id" value="{{ wpis.id }}">
-                        <button type="submit" class="btn btn-default btn-sm">Usuń</button>
-                    </form>
-                </td>
+    <div id="tabela">
+        <table class="table">
+            <tr>
+                <th width="50">Id</th>
+                <th>Data dodania</th>
+                <th>Temat</th>
+                <th>Treść</th>
+                <th>Kategoria</th>
+                <th>Edycja</th>
+                <th>Usunięcie</th>
             </tr>
-        {% endfor %}
-    </table>
-</div>
+            {% for wpis in wpisy %}
+                <tr id="button">
+                    <td>{{ wpis.id }}</td>
+                    <td>{{ wpis.createat|date('Y-m-d H:i:s') }}</td>
+                    <td>{{ wpis.temat }}</td>
+                    <td>{{ wpis.tresc|raw }}</td>
+                    <td>
+                        {% for kategoria in wpis.kategorie %}
+                            <div>{{ kategoria.nazwa }}</div>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        <form method="post" action="{{ path('edytujwpis') }}">
+                            <input type="hidden" name="id" value="{{ wpis.id }}">
+                            <button type="submit" class="btn btn-default btn-sm">Edytuj</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" action="{{ path('usunwpis') }}">
+                            <input type="hidden" name="id" value="{{ wpis.id }}">
+                            <button type="submit" class="btn btn-default btn-sm">Usuń</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 {% endblock %}

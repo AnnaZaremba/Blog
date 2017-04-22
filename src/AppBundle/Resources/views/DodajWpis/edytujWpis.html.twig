@@ -1,7 +1,7 @@
 {% extends 'index.html.twig' %}
 {% block container %}
     {{ tinymce_init() }}
-    <div id="box_news">
+    <div class="col-lg-12" id="box_news">
         <h2>Edytuj wpis</h2>
         {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
         <div>
@@ -29,12 +29,7 @@
             </div>
             {{ form_end(form) }}
         </div>
-    </div>
-{% endblock %}
-
-{% block bottomContainer %}
-    <div class="row">
-        <div class="col-lg-12">
+        <div>
             {% include('tabelaWpisow.html.twig') %}
         </div>
     </div>

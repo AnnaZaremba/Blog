@@ -1,10 +1,10 @@
 {% block menu %}
-<div id="bar_right">
-    <h2>KATEGORIE</h2>
-    <div>
+    <div id="bar_right">
+        <h2>KATEGORIE</h2>
+        <div>
             {% for kategoria in kategorie %}
                 <a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}"><h3>{{ kategoria.nazwa }}</h3></a>
             {% endfor %}
+        </div>
     </div>
-</div>
 {% endblock %}

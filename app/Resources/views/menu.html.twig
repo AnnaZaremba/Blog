@@ -1,10 +1,14 @@
 {% block menu %}
-    <div id="bar_right">
-        <h2>KATEGORIE</h2>
-        <div>
-            {% for kategoria in kategorie %}
-                <a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}"><h3>{{ kategoria.nazwa }}</h3></a>
-            {% endfor %}
-        </div>
+    <div id="sidebar" class="4u">
+        <section>
+            <header>
+                <h2>Kategorie</h2>
+            </header>
+            <ul class="style">
+                {% for kategoria in kategorie %}
+                    <li><a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}"><h3>{{ kategoria.nazwa }}</h3></a></li>
+                {% endfor %}
+            </ul>
+        </section>
     </div>
 {% endblock %}

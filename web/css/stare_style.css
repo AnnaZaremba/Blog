@@ -1,0 +1,388 @@
+body {
+    font-size: 12px;
+    color: #F1F1F1;
+    background: #CCC url(../images/bg.jpg) no-repeat fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    font-family: Arial;
+}
+
+#wrapper {
+    width: 945px;
+    margin: 0 auto;
+    text-align: left;
+    background: #FFF;
+}
+
+a {
+    color: #424242;
+    text-decoration: none;
+}
+
+p {
+    color: #777;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    padding-top: 20px;
+    margin-top: 50px;
+    float: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#logo h2 {
+    font-size: 28px;
+    font-weight: normal;
+    color: #000;
+    text-shadow: #fff 0px 1px 0px;
+}
+
+#logo a, #logo img {
+    text-decoration: none;
+    border: 0px;
+}
+
+#menu {
+    width: 100%;
+    height: 80px;
+    float: left;
+    background: #FFF;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    height: 50px;
+    padding: 0px 0px 0px 0px;
+}
+
+#menu li {
+    display: block;
+    float: left;
+    color: #FFF;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#menu a {
+    color: #222;
+    font-size: 16px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    text-transform: none;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 15px;
+    border: 1px solid #FFF;
+}
+
+#menu a:hover {
+    border: 1px solid #CCC;
+}
+
+#search_top {
+    float: right;
+    padding-top: 25px;
+    padding-right: 50px;
+
+}
+
+#search_top input {
+    border: 1px solid #999;
+    padding: 5px;
+    color: #000;
+    background: url(../images/search.png) no-repeat right;
+}
+
+#header {
+    float: left;
+    width: 100%;
+    height: 357px;
+    background: url(../images/panorama_gory.jpg) no-repeat;
+}
+
+#title_head {
+    margin-top: 50px;
+    background: url(../images/bg_trs.png);
+    float: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#title_head h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#title_head p {
+    color: #666;
+    font-size: 16px;
+    text-shadow: #FFF 0px 1px 0px;
+}
+
+#title_head a {
+    padding: 5px;
+
+    color: #444;
+}
+
+#title_head a:hover {
+    color: #333;
+}
+
+#head_image {
+    float: right;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 500px;
+}
+
+.margin1 {
+    margin-left: 15px;
+}
+
+.margin2 {
+    margin-left: 25px;
+}
+
+.margin3 {
+    margin-top: 10px;
+}
+
+.margin4 {
+    margin-left: 45px;
+}
+
+#start {
+    float: left;
+    width: 600px;
+    padding: 5px;
+    margin-left: 30px;
+}
+
+#start h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+#start h4 {
+    font-size: 12px;
+    text-transform: none;
+    line-height: 23px;
+    text-align: left;
+    color: #777;
+}
+
+#box_news {
+    float: left;
+    width: 900px;
+    padding: 5px;
+    margin-left: 30px;
+}
+
+#box_news h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+#box_news h3 {
+    font-size: 17px;
+    text-transform: none;
+    line-height: 23px;
+    text-align: left;
+    color: #777;
+}
+
+#box_news h4 {
+    font-size: 12px;
+    text-transform: none;
+    line-height: 23px;
+    text-align: left;
+    color: #777;
+}
+
+#box_news img {
+    border: 1px solid #999;
+    padding: 5px;
+    margin-right: 25px;
+}
+
+#box_news a {
+    font-size: 17px;
+    text-transform: none;
+    line-height: 30px;
+    text-align: left;
+    color: #777;
+}
+
+#box_sidebar {
+    width: 250px;
+    float: left;
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 20px;
+    border-left: 1px solid #CCC;
+}
+
+#box_sidebar a {
+    color: #000;
+    font-size: 16px;
+}
+
+#box_sidebar span {
+    color: #777;
+    padding-top: 10px;
+}
+
+#container {
+    float: left;
+    margin-bottom: 10px;
+    width: 960px;
+    background: #fff;
+    padding-top: 30px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+#content_box {
+    width: 960px;
+    padding: 10px;
+    float: left;
+    text-align: justify;
+    border-top: 1px solid #CCC;
+}
+
+#content_box h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #FFF;
+    padding: 0 0 5px 0;
+}
+
+#content_box a {
+    color: #555;
+    font-size: 13px;
+    display: block;
+    float: left;
+    padding: 5px 10px 5px 15px;
+    text-decoration: none;
+}
+
+#content_box a:hover {
+    color: #333;
+}
+
+#box_content {
+    width: 260px;
+    float: left;
+}
+
+#box_content img {
+    padding: 5px;
+    border: 1px solid #CCC;
+}
+
+#box_content h2 {
+    color: #000;
+    font-size: 26px;
+}
+
+#footer {
+    width: 900px;
+    font-size: 12px;
+    margin: 0 auto;
+    color: #000;
+    padding-left: 10px;
+}
+
+#footer a {
+    color: #555;
+}
+
+#bar_right {
+    width: 250px;
+    float: right;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#bar_right h2 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #000000;
+}
+
+#bar_right h3 {
+    color: #424242;
+    font-size: 15px;
+}
+
+#bar_right h4 {
+    color: #424242;
+}
+
+#bar_right ul {
+    padding-left: 10px;
+}
+
+#formularz .form-control {
+    height: 50px;
+}
+
+#formularz h3 {
+    font-size: 17px;
+    text-transform: none;
+    color: #424242;
+}
+
+#dodajWpisKategorie .form-control {
+    height: auto;
+    text-align: center;
+}
+
+#dodajWpisKategorie label {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+#button .btn-default {
+    color: #ffffff;
+    background-color: #2a4039;
+    border-color: #3c3c3c;
+    line-height: 23px;
+}
+
+#button .btn-default:hover {
+    color: #ffffff;
+    background-color: #37534a;
+    border-color: #3c3c3c;
+}
+
+#blad {
+    color: #aa0000;
+}
+
+#tabela {
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 90%;
+    padding: 5px;
+}

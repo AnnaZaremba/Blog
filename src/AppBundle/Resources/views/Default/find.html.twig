@@ -1,11 +1,40 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div class="col-lg-12" id="box_news">
-        <div>
-            <h2>{{ wpis.temat }}</h2>
+    <div id="header">
+        <div class="container">
+            <div id="logo">
+                <h1><a href="{{ path('homepage') }}">Anna Zaremba</a></h1>
+                <span>Programowanie z pasją</span>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li class="active"><a href="{{ path('homepage') }}">Strona główna</a></li>
+                    <li><a href="{{ path('omnie') }}">O mnie</a></li>
+                    <li><a href="{{ path('kontakt') }}">Kontakt</a></li>
+                    <li><a href="{{ path('admin') }}">Moje konto</a></li>
+                </ul>
+            </nav>
         </div>
-        <div>
-            <h4>{{ wpis.tresc|raw }}</h4>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div id="content" class="12u skel-cell-important">
+                    <section>
+                        <header>
+                            <h2>{{ wpis.temat }}</h2>
+                        </header>
+                        <div>
+                            <h4>{{ wpis.tresc|raw }}</h4>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <div class="container">
+            Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017
         </div>
     </div>
 {% endblock %}

@@ -1,21 +1,5 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div id="header">
-        <div class="container">
-            <div id="logo">
-                <h1><a href="{{ path('homepage') }}">Anna Zaremba</a></h1>
-                <span>Programowanie z pasją</span>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li class="active"><a href="{{ path('homepage') }}">Strona główna</a></li>
-                    <li><a href="{{ path('omnie') }}">O mnie</a></li>
-                    <li><a href="{{ path('kontakt') }}">Kontakt</a></li>
-                    <li><a href="{{ path('admin') }}">Moje konto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
     <div id="main">
         <div class="container">
             <div class="row">
@@ -29,7 +13,7 @@
                                 </div>
                             {% endif %}
                         </header>
-                        <div id="formularz">
+                        <div>
                             <form action="{{ path('login') }}" method="post">
                                 <div>
                                     <h3>Nazwa</h3>
@@ -39,7 +23,7 @@
                                     <h3>Hasło</h3>
                                     <input class="form-control" type="password" id="password" name="_password"/>
                                 </div>
-                                <div id="button">
+                                <div>
                                     <h3>
                                         <button type="submit" class="btn btn-default btn-sm">Zaloguj</button>
                                     </h3>
@@ -49,11 +33,6 @@
                     </section>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="copyright">
-        <div class="container">
-            Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017
         </div>
     </div>
 {% endblock %}

@@ -392,3 +392,20 @@
 #blad {
 	color: #aa0000;
 }
+
+#dodajWpisKategorie .form-control {
+	display: inline;
+	height: auto;
+	text-align: center;
+}
+
+#dodajWpisKategorie label {
+	max-width: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#formularz .form-control {
+	width: 500px;
+}

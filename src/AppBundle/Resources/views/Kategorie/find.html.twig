@@ -1,15 +1,23 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div id="box_news">
-        <div>
-            <h2>{{ kategoria.nazwa }} </h2>
-        </div>
-        <div>
-            <h3>
-                {% for wpis in wpisy %}
-                    <a href="{{ path('wpisid', { 'id': wpis.id }) }}"><h4>{{ wpis.temat }}</h4></a>
-                {% endfor %}
-            </h3>
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div id="content" class="12u skel-cell-important">
+                    <section>
+                        <header>
+                            <h3>{{ kategoria.nazwa }}</h3>
+                        </header>
+                        <div>
+                            <h3>
+                                {% for wpis in wpisy %}
+                                    <a href="{{ path('wpisid', { 'id': wpis.id }) }}"><h4>{{ wpis.temat }}</h4></a>
+                                {% endfor %}
+                            </h3>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

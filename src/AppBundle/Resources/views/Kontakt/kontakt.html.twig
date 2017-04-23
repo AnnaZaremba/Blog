@@ -1,21 +1,5 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div id="header">
-        <div class="container">
-            <div id="logo">
-                <h1><a href="{{ path('homepage') }}">Anna Zaremba</a></h1>
-                <span>Programowanie z pasją</span>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li class="active"><a href="{{ path('homepage') }}">Strona główna</a></li>
-                    <li><a href="{{ path('omnie') }}">O mnie</a></li>
-                    <li><a href="{{ path('kontakt') }}">Kontakt</a></li>
-                    <li><a href="{{ path('admin') }}">Moje konto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
     <div id="main">
         <div class="container">
             <div class="row">
@@ -24,41 +8,58 @@
                         <header>
                             <h2>Kontakt</h2>
                         </header>
-                        {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
                         <div>
-                            <div>
+                            {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
+                            <div class="form-group" id="formularz">
                                 <div>
-                                    <h3>Imię</h3>
-                                    {{ form_widget(form.imie, {'attr': {'class': 'form-control'}}) }}
-                                    <div id="blad">{{ form_errors(form.imie) }}</div>
-                                    <h3>E-mail</h3>
-                                    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
-                                    <div id="blad">{{ form_errors(form.email) }}</div>
-                                    <h3>Temat</h3>
-                                    {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
-                                    <div id="blad">{{ form_errors(form.temat) }}</div>
+                                    <div>
+                                        <label>Imię</label>
+                                    </div>
+                                    <div>
+                                        {{ form_widget(form.imie, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div id="blad">
+                                        {{ form_errors(form.imie) }}
+                                    </div>
+                                    <div>
+                                        <label>E-mail</label>
+                                    </div>
+                                    <div>
+                                        {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div id="blad">
+                                        {{ form_errors(form.email) }}
+                                    </div>
+                                    <div>
+                                        <label>Temat</label>
+                                    </div>
+                                    <div>
+                                        {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div id="blad">
+                                        {{ form_errors(form.temat) }}
+                                    </div>
                                 </div>
                                 <div>
-                                    <h3>Wiadomość</h3>
-                                    {{ form_widget(form.wiadomosc, {'attr': {'class': 'form-control'}}) }}
-                                    <div id="blad">{{ form_errors(form.wiadomosc) }}</div>
+                                    <div>
+                                        <label>Wiadomość</label>
+                                    </div>
+                                    <div>
+                                        {{ form_widget(form.wiadomosc, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div id="blad">
+                                        {{ form_errors(form.wiadomosc) }}
+                                    </div>
                                 </div>
                             </div>
                             <div>
-                                <h3>
-                                    <button type="submit" class="btn btn-default btn-sm">Wyślij wiadomość</button>
-                                </h3>
+                                <button type="submit" class="btn btn-default">Wyślij wiadomość</button>
                             </div>
                             {{ form_end(form) }}
                         </div>
                     </section>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="copyright">
-        <div class="container">
-            Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017
         </div>
     </div>
 {% endblock %}

@@ -1,36 +1,54 @@
 {% extends 'index.html.twig' %}
 {% block container %}
     {{ tinymce_init() }}
-    <div class="col-lg-12" id="box_news">
-        <h2>Edytuj wpis</h2>
-        {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-        <div>
-            <div id="formularz">
-                <div>
-                    <h4>Temat</h4>
-                    {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
-                    <div id="blad">{{ form_errors(form.temat) }}</div>
-                </div>
-                <div>
-                    <h4>Treść</h4>
-                    {{ form_widget(form.tresc, {'attr': {'class': 'form-control tinymce'}}) }}
-                    <div id="blad">{{ form_errors(form.tresc) }}</div>
-                </div>
-                <div>
-                    <h4>Kategorie</h4>
-                    {{ form_widget(form.kategorie, {'attr': { 'class': 'form-control'}}) }}
-                    <div id="blad">{{ form_errors(form.kategorie) }}</div>
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div id="content" class="12u skel-cell-important">
+                    <section>
+                        <header>
+                            <h2>Edytuj wpis</h2>
+                        </header>
+                        <div>
+                            {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
+                            <div class="form-group" id="formularz">
+                                <div>
+                                    <label>Temat</label>
+                                </div>
+                                <div>
+                                    {{ form_widget(form.temat, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div id="blad">
+                                    {{ form_errors(form.temat) }}
+                                </div>
+                                <div>
+                                    <label>Treść</label>
+                                </div>
+                                <div>
+                                    {{ form_widget(form.tresc, {'attr': {'class': 'form-control tinymce'}}) }}
+                                </div>
+                                <div id="blad">
+                                    {{ form_errors(form.tresc) }}
+                                </div>
+                                <div>
+                                    <label>Kategorie</label>
+                                </div>
+                                <div id="dodajWpisKategorie">
+                                    {{ form_widget(form.kategorie, {'attr': { 'class': 'form-control'}}) }}
+                                </div>
+                                <div id="blad">
+                                    {{ form_errors(form.kategorie) }}
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-default">Edytuj wpis</button>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </section>
                 </div>
             </div>
-            <div id="button">
-                <h3>
-                    <button type="submit" class="btn btn-default btn-sm">Edytuj wpis</button>
-                </h3>
-            </div>
-            {{ form_end(form) }}
-        </div>
-        <div>
-            {% include('tabelaWpisow.html.twig') %}
         </div>
     </div>
+    {% include('tabelaWpisow.html.twig') %}
 {% endblock %}

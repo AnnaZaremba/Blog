@@ -4,9 +4,9 @@
             <header>
                 <h2>Kategorie</h2>
             </header>
-            <ul class="style">
+            <ul>
                 {% for kategoria in kategorie %}
-                    <li><a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}"><h3>{{ kategoria.nazwa }}</h3></a></li>
+                    <li><a href="{{ path('kategoriaid', { 'id': kategoria.id }) }}">{{ kategoria.nazwa }}</a></li>
                 {% endfor %}
             </ul>
         </section>

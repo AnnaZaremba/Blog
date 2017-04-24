@@ -10,7 +10,7 @@
                         </header>
                         <ul>
                             {% for wpis in wpisy %}
-                                <li><a href="{{ path('wpisid', { 'id': wpis.id }) }}"><h3>{{ wpis.temat }}</h3></a></li>
+                                <li><a href="{{ path('wpisid', { 'id': wpis.id }) }}">{{ wpis.temat }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>

@@ -11,7 +11,7 @@
                         </header>
                         <div>
                             {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-                            <div class="form-group" id="formularz">
+                            <div>
                                 <div>
                                     <label>Temat</label>
                                 </div>
@@ -33,7 +33,7 @@
                                 <div>
                                     <label>Kategorie</label>
                                 </div>
-                                <div id="dodajWpisKategorie">
+                                <div>
                                     {{ form_widget(form.kategorie, {'attr': { 'class': 'form-control'}}) }}
                                 </div>
                                 <div id="blad">
@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-default">Edytuj wpis</button>
+                                <button type="submit" class="btn">Edytuj wpis</button>
                             </div>
                             {{ form_end(form) }}
                         </div>

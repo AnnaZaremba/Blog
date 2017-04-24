@@ -26,20 +26,20 @@
 		text-transform: uppercase;
 		font-weight: bold;
 	}
-	
+
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 		{
 			color: inherit;
 			text-decoration: none;
 		}
-		
+
 	/* Change this to whatever font weight/color pairing is most suitable */
 	strong, b
 	{
 		font-weight: bold;
 		color: #000000;
 	}
-	
+
 	em, i
 	{
 		font-style: italic;
@@ -56,55 +56,56 @@
 	{
 		text-decoration: none;
 	}
-	
+
 	sub
 	{
 		position: relative;
 		top: 0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	sup
 	{
 		position: relative;
 		top: -0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	hr
 	{
 		border: 0;
 		border-top: solid 1px #ddd;
 	}
-	
+
 	blockquote
 	{
 		border-left: solid 0.5em #ddd;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
-	
+
 	p, ul, ol, dl, table
 	{
 		margin-bottom: 1em;
+        font-size: 18px;
 	}
 
 	header
 	{
 		margin-bottom: 1em;
 	}
-	
+
 		header h2
 		{
 		}
-	
+
 		header .byline
 		{
 			display: block;
 			margin: 0.5em 0 0 0;
 			padding: 0 0 0.5em 0;
 		}
-		
+
 	footer
 	{
 		margin-top: 1em;
@@ -116,13 +117,13 @@
 	}
 
 	/* Sections/Articles */
-	
+
 		section,
 		article
 		{
 			margin-bottom: 3em;
 		}
-		
+
 		section > :last-child,
 		article > :last-child
 		{
@@ -147,7 +148,7 @@
 		{
 			display: inline-block;
 		}
-		
+
 			.image img
 			{
 				display: block;
@@ -160,20 +161,20 @@
 				width: 100%;
 				margin: 0 0 2em 0;
 			}
-			
+
 			.image.full
 			{
 				display: block;
 				width: 100%;
 				margin: 0 0 2em 0;
 			}
-			
+
 			.image.left
 			{
 				float: left;
 				margin: 0 2em 2em 0;
 			}
-			
+
 			.image.centered
 			{
 				display: block;
@@ -194,54 +195,54 @@
 			padding: 0;
 			list-style: none;
 		}
-		
+
 			ul.default li
 			{
 				padding: 0.60em 0em;
 				border-top: 1px solid;
 				border-color: rgba(255,255,255,.1);
 			}
-			
+
 			ul.default li:first-child
 			{
 				padding-top: 0;
 				border-top: none;
 			}
-			
+
 			ul.default a
 			{
 				text-decoration: none;
 				color: rgba(255,255,255,.5);
 			}
-			
+
 			ul.default a:hover
 			{
 				text-decoration: underline;
 			}
-			
+
 		ul.style {
 		}
-		
+
 		ul.style li {
 			margin: 0;
 			padding: 2em 0em 1.5em 0em;
 			border-top: 1px solid #ECECEC;
 		}
-		
+
 		ul.style li:first-child
 		{
 			padding-top: 0;
 			border-top: none;
 		}
-		
+
 		ul.style img {
 			float: left;
 			margin-right: 20px;
 		}
-		
+
 		ul.style p {
 		}
-		
+
 		ul.style .posted {
 			padding: 0em 0em 1em 0em;
 			letter-spacing: 1px;
@@ -249,15 +250,15 @@
 			font-size: 8pt;
 			color: #A2A2A2;
 		}
-		
+
 		ul.style .first {
 			padding-top: 0px;
 			border-top: none;
 		}
-							
+
 
 	/* Buttons */
-		
+
 		.button
 		{
 			position: relative;
@@ -283,7 +284,7 @@
 				background: #de3d27;
 				color: #FFF !important;
 			}
-			
+
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
@@ -298,7 +299,7 @@
 	#logo
 	{
 	}
-	
+
 	#nav
 	{
 	}
@@ -307,7 +308,7 @@
 		{
 			margin: 0;
 		}
-	
+
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
@@ -332,40 +333,40 @@
 /*********************************************************************************/
 /* Featured                                                                      */
 /*********************************************************************************/
-	
+
 	#featured
 	{
 		position: relative;
 		background: #f2f2f2;
 	}
-	
+
 	#featured h2
 	{
 		display: block;
 		margin-bottom: 2em;
 		font-size: 1.4em;
 	}
-	
+
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
-	
+
 	#footer
 	{
 		position: relative;
 		background: #1d1d1d;
 	}
-	
+
 	#footer h2
 	{
 		display: block;
 		color: #FFF;
 	}
-	
+
 /*********************************************************************************/
 /* Copyright                                                                     */
 /*********************************************************************************/
-	
+
 	#copyright
 	{
 		position: relative;
@@ -374,11 +375,11 @@
 		text-align: center;
 		color: rgba(255,255,255,.2);
 	}
-	
+
 	#copyright .container
 	{
 	}
-	
+
 	#copyright a
 	{
 		text-decoration: none;
@@ -386,26 +387,138 @@
 	}
 
 /*********************************************************************************/
-/*                                                                               */
+/* Formularz                                                                     */
 /*********************************************************************************/
+
+.form-control {
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control label {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.form-control::-ms-expand {
+	background-color: transparent;
+	border: 0;
+}
 
 #blad {
 	color: #aa0000;
 }
 
-#dodajWpisKategorie .form-control {
-	display: inline;
-	height: auto;
+/*********************************************************************************/
+/* Button                                                                        */
+/*********************************************************************************/
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-top: 15px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
 	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+	color: #333;
+	text-decoration: none;
+}
+.btn:active,
+.btn.active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+	cursor: not-allowed;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	opacity: .65;
 }
 
-#dodajWpisKategorie label {
+
+/*********************************************************************************/
+/* Table                                                                         */
+/*********************************************************************************/
+
+.table {
+	text-align: center;
+	width: 100%;
 	max-width: 100%;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
-#formularz .form-control {
-	width: 500px;
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}
+.table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #ddd;
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+.table > tbody + tbody {
+	border-top: 2px solid #ddd;
+}
+.table .table {
+	background-color: #fff;
 }

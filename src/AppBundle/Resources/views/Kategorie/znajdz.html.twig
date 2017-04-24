@@ -6,11 +6,13 @@
                 <div id="content" class="8u skel-cell-important">
                     <div>
                         <header>
-                            <h2>{{ wpis.temat }}</h2>
+                            <h2>{{ kategoria.nazwa }}</h2>
                         </header>
-                        <div>
-                            <h4>{{ wpis.tresc|raw }}</h4>
-                        </div>
+                        <ul>
+                            {% for wpis in wpisy %}
+                                <li><a href="{{ path('wpisid', { 'id': wpis.id }) }}"><h3>{{ wpis.temat }}</h3></a></li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
                 {% block menu %}

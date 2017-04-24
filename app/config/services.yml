@@ -29,7 +29,7 @@ services:
 
     app.kategorie_controller:
         class: AppBundle\Controller\KategorieController
-        arguments: ['@app.kategoria_repository']
+        arguments: ['@app.kategoria_repository', '@app.wpis_repository']
 
     app.kontakt_controller:
         class: AppBundle\Controller\KontaktController

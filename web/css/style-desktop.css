@@ -48,7 +48,7 @@
 	
 		#logo h1
 		{
-			color: #FFF;
+			color: #5c5555;
 		}
 	
 		#logo h1 a
@@ -59,7 +59,7 @@
 			text-transform: uppercase;
 			font-size: 5em;
 			font-weight: 900;
-			color: #FFF;
+			color: #5c5555;
 		}
 
 		#logo span
@@ -69,7 +69,6 @@
 			letter-spacing: 1px;
 			text-transform: uppercase;
 			font-size: 1.2em;
-			color: rgba(255,255,255,.5);
 		}			
 			
 
@@ -102,13 +101,13 @@
 				font-weight: 200;
 				font-size: 1em;
 				outline: 0;
-				color: rgba(255,255,255,.7);
+				color: #5c5555;
 			}
 
 
 			#nav > ul > li > a:hover
 			{
-				color: #FFF;
+				color: #5c5555;
 			}
 
 			#nav li.active a
@@ -116,8 +115,8 @@
 				background: none;
 				border-radius: 40px;
 				border: 2px solid;
-				border-color: rgba(255,255,255,.8);
-				color: #FFF;
+				border-color: #5c5555;
+				color: #5c5555;
 			}
 
 			#nav > ul > li > ul

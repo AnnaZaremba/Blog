@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<!--
+	Iridium by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+<head>
+    <title>Anna Zaremba</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lte IE 8]>
+    <script src="{{ asset('css/ie/html5shiv.js') }}"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{ asset('js/skel.min.js') }}"></script>
+    <script src="{{ asset('js/skel-panels.min.js') }}"></script>
+    <script src="{{ asset('js/init.js') }}"></script>
+    <noscript>
+        <link rel="stylesheet" href="{{ asset('css/skel-noscript.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/style-desktop.css') }}"/>
+    </noscript>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="{{ asset('css/ie/v8.css') }}"/><![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="{{ asset('css/ie/v9.css') }}"/><![endif]-->
+</head>
+<body class="homepage">
+<div id="header">
+    <div class="container">
+        <div id="logo">
+            <h1><a href="{{ path('homepage') }}">Anna Zaremba</a></h1>
+            <span>Programowanie z pasją</span>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li class="active"><a href="{{ path('homepage') }}">Strona główna</a></li>
+                <li><a href="{{ path('omnie') }}">O mnie</a></li>
+                <li><a href="{{ path('kontakt') }}">Kontakt</a></li>
+                <li><a href="{{ path('admin') }}">Moje konto</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+{% block container %}{% endblock %}
+</body>
+<div id="copyright">
+    <div class="container">
+        Copyright &copy; <a href="{{ path('homepage') }}">Anna Zaremba</a> 2017
+    </div>
+</div>
+</html>

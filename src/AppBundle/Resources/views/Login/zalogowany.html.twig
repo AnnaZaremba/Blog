@@ -1,26 +1,20 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div id="main">
-        <div class="container">
-            <div class="row">
-                <div id="content" class="12u skel-cell-important">
-                    <section>
-                        <header>
-                            <h2>Panel użytkownika</h2>
-                        </header>
-                        <ul>
-                            <li>
-                                <a href="{{ path('dodajkategorie') }}">Kategorie</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('dodajwpis') }}">Wpisy</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('logout') }}">Wyloguj</a>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
+    <div class="container">
+        <div class="row">
+            <h2>Panel użytkownika</h2>
+            <div id="lista">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="{{ path('dodajkategorie') }}">Kategorie</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('dodajwpis') }}">Wpisy</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('logout') }}">Wyloguj</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

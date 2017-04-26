@@ -1,39 +1,31 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div id="main">
-        <div class="container">
-            <div class="row">
-                <div id="content" class="12u skel-cell-important">
-                    <section>
-                        <header>
-                            <h2>Logowanie</h2>
-                            {% if error %}
-                                <div id="blad">
-                                    {{ error.messageKey|trans(error.messageData, 'security') }}
-                                </div>
-                            {% endif %}
-                        </header>
-                        <div>
-                            <form action="{{ path('login') }}" method="post">
-                                <div>
-                                    <label>Nazwa</label>
-                                </div>
-                                <div>
-                                    <input class="form-control" type="text" id="username" name="_username"/>
-                                </div>
-                                <div>
-                                    <label>Hasło</label>
-                                </div>
-                                <div>
-                                    <input class="form-control" type="password" id="password" name="_password"/>
-                                </div>
-                                <div>
-                                    <button type="submit" class="btn">Zaloguj</button>
-                                </div>
-                            </form>
-                        </div>
-                    </section>
+    <div class="container">
+        <div class="row">
+            <h2>Logowanie</h2>
+            {% if error %}
+                <div id="blad">
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
                 </div>
+            {% endif %}
+            <div>
+                <form action="{{ path('login') }}" method="post">
+                    <div>
+                        <label>Nazwa</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" id="username" name="_username"/>
+                    </div>
+                    <div>
+                        <label>Hasło</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="password" id="password" name="_password"/>
+                    </div>
+                    <div>
+                        <button class="btn btn-default" type="submit">Zaloguj</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

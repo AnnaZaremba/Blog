@@ -1,35 +1,27 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div id="main">
-        <div class="container">
-            <div class="row">
-                <div id="content" class="12u skel-cell-important">
-                    <section>
-                        <header>
-                            <h2>Edytuj kategorię</h2>
-                        </header>
+    <div class="container">
+        <div class="row">
+            <h2>Edytuj kategorię</h2>
+            <div>
+                {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
+                <div>
+                    <div>
                         <div>
-                            {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-                            <div>
-                                <div>
-                                    <div>
-                                        <label>Nazwa</label>
-                                    </div>
-                                    <div>
-                                        {{ form_widget(form.nazwa, {'attr': {'class': 'form-control'}}) }}
-                                    </div>
-                                    <div id="blad">
-                                        {{ form_errors(form.nazwa) }}
-                                    </div>
-                                </div>
-                                <div>
-                                    <button type="submit" class="btn">Edytuj kategorię</button>
-                                </div>
-                            </div>
-                            {{ form_end(form) }}
+                            <label>Nazwa</label>
                         </div>
-                    </section>
+                        <div>
+                            {{ form_widget(form.nazwa, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div id="blad">
+                            {{ form_errors(form.nazwa) }}
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-default" type="submit">Edytuj kategorię</button>
+                    </div>
                 </div>
+                {{ form_end(form) }}
             </div>
         </div>
     </div>

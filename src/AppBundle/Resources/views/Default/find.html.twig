@@ -1,21 +1,10 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div id="main">
-        <div class="container">
-            <div class="row">
-                <div id="content" class="8u skel-cell-important">
-                    <div>
-                        <header>
-                            <h2>{{ wpis.temat }}</h2>
-                        </header>
-                        <div>
-                           {{ wpis.tresc|raw }}
-                        </div>
-                    </div>
-                </div>
-                {% block menu %}
-                    {% include('menu.html.twig') %}
-                {% endblock %}
+    <div class="container">
+        <div class="row">
+            <div>
+                <h2>{{ wpis.temat }}</h2>
+                <h4>{{ wpis.tresc|raw }}</h4>
             </div>
         </div>
     </div>

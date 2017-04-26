@@ -1,23 +1,14 @@
 {% extends 'index.html.twig' %}
 {% block container %}
-    <div id="main">
-        <div class="container">
-            <div class="row">
-                <div id="content" class="8u skel-cell-important">
-                    <div>
-                        <header>
-                            <h2>{{ kategoria.nazwa }}</h2>
-                        </header>
-                        <ul>
-                            {% for wpis in wpisy %}
-                                <li><a href="{{ path('wpisid', { 'id': wpis.id }) }}">{{ wpis.temat }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% block menu %}
-                    {% include('menu.html.twig') %}
-                {% endblock %}
+    <div class="container">
+        <div class="row">
+            <h2>{{ kategoria.nazwa }}</h2>
+            <div id="lista">
+                <ul class="list-unstyled">
+                    {% for wpis in wpisy %}
+                        <li><a href="{{ path('wpisid', { 'id': wpis.id }) }}">{{ wpis.temat }}</a></li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>

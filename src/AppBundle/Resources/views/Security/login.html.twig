@@ -8,7 +8,7 @@
                     {{ error.messageKey|trans(error.messageData, 'security') }}
                 </div>
             {% endif %}
-            <div>
+            <div id="formularz">
                 <form action="{{ path('login') }}" method="post">
                     <div>
                         <label>Nazwa</label>
@@ -22,7 +22,7 @@
                     <div>
                         <input class="form-control" type="password" id="password" name="_password"/>
                     </div>
-                    <div>
+                    <div id="przycisk">
                         <button class="btn btn-default" type="submit">Zaloguj</button>
                     </div>
                 </form>

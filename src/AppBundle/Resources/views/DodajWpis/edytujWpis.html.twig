@@ -6,7 +6,7 @@
             <h2>Edytuj wpis</h2>
             <div>
                 {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-                <div>
+                <div id="formularz">
                     <div>
                         <label>Temat</label>
                     </div>
@@ -28,14 +28,14 @@
                     <div>
                         <label>Kategorie</label>
                     </div>
-                    <div>
+                    <div id="dodajKategorie">
                         {{ form_widget(form.kategorie, {'attr': { 'class': 'form-control'}}) }}
                     </div>
                     <div id="blad">
                         {{ form_errors(form.kategorie) }}
                     </div>
                 </div>
-                <div>
+                <div id="przycisk">
                     <button class="btn btn-default" type="submit">Edytuj wpis</button>
                 </div>
                 {{ form_end(form) }}

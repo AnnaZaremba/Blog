@@ -5,7 +5,7 @@
             <h2>Dodaj kategorię</h2>
             <div>
                 {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-                <div>
+                <div id="formularz">
                     <div>
                         <div>
                             <label>Nazwa</label>
@@ -17,7 +17,7 @@
                             {{ form_errors(form.nazwa) }}
                         </div>
                     </div>
-                    <div>
+                    <div id="przycisk">
                         <button class="btn btn-default" type="submit">Dodaj kategorię</button>
                     </div>
                 </div>

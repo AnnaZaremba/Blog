@@ -5,7 +5,7 @@
                 <h2>Kontakt</h2>
             <div>
                 {{ form_start(form, { 'attr': { 'novalidate': 'novalidate'}}) }}
-                <div>
+                <div id="formularz">
                     <div>
                         <div>
                             <label>Imię</label>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div id="przycisk">
                     <button class="btn btn-default" type="submit">Wyślij wiadomość</button>
                 </div>
                 {{ form_end(form) }}

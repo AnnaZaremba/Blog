@@ -52,9 +52,8 @@ class DefaultController extends Controller
     public function findAction($id)
     {
         return [
-            'wpis' => $this->wpisRepository->getOneById($id),
             'kategorie' => $this->kategoriaRepository->getAllOrderByName(),
-            'wpisy' => $this->wpisRepository->getAllOrderByName(),
+            'wpis' => $this->wpisRepository->getOneById($id),
         ];
     }
 

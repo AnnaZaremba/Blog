@@ -5,6 +5,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Nazwa</th>
+                        <th>Data dodania</th>
                         <th>Edycja</th>
                         <th>Usunięcie</th>
                     </tr>
@@ -12,6 +13,7 @@
                         <tr>
                             <td>{{ kategoria.id }}</td>
                             <td>{{ kategoria.nazwa }}</td>
+                            <td>{{ kategoria.createat|date('Y-m-d H:i:s') }}</td>
                             <td>
                                 <form method="post" action="{{ path('edytujkategorie') }}">
                                     <input type="hidden" name="id" value="{{ kategoria.id }}">

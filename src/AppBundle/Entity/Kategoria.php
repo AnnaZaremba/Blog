@@ -32,6 +32,12 @@ class Kategoria
     private $wpisy;
 
     /**
+     * @ORM\Column(type="datetime")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $createat;
+
+    /**
      * Kategoria constructor.
      */
     public function __construct()
@@ -97,4 +103,19 @@ class Kategoria
         $this->wpisy->removeElement($wpis);
     }
 
+    /**
+     * @return mixed
+     */
+    public function getCreateat()
+    {
+        return $this->createat;
+    }
+
+    /**
+     * @param mixed $createat
+     */
+    public function setCreateat($createat)
+    {
+        $this->createat = $createat;
+    }
 }

@@ -20,13 +20,11 @@ class Wpis
 
     /**
      * @ORM\Column(type="datetime")
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $createat;
 
     /**
      * @ORM\Column(type="string")
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $lastmodify;
 
@@ -52,6 +50,7 @@ class Wpis
     public function __construct()
     {
         $this->kategorie = new ArrayCollection();
+        $this->createat = new \DateTime();
     }
 
     /**

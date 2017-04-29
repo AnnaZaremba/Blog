@@ -14,7 +14,7 @@
                     {% for wpis in wpisy %}
                         <tr>
                             <td>{{ wpis.id }}</td>
-                            <td>{{ wpis.createat|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ wpis.createat is null ? "" : wpis.createat|date('Y-m-d H:i:s') }}</td>
                             <td>{{ wpis.temat }}</td>
                             <td>{{ wpis.tresc|raw }}</td>
                             <td>

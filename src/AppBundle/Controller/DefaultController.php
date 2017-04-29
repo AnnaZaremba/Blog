@@ -38,7 +38,7 @@ class DefaultController extends Controller
     {
         return [
             'kategorie' => $this->kategoriaRepository->getAllOrderByName(),
-            'wpis' => $this->wpisRepository->getLast(),
+            'wpisy' => $this->wpisRepository->getAll(),
         ];
     }
 

@@ -13,7 +13,7 @@
                         <tr>
                             <td>{{ kategoria.id }}</td>
                             <td>{{ kategoria.nazwa }}</td>
-                            <td>{{ kategoria.createat|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ kategoria.createat is null ? "" : kategoria.createat|date('Y-m-d H:i:s') }}</td>
                             <td>
                                 <form method="post" action="{{ path('edytujkategorie') }}">
                                     <input type="hidden" name="id" value="{{ kategoria.id }}">

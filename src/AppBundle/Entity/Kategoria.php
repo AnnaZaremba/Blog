@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\OrderBy;
+use Symfony\Component\Validator\Constraints\Date;
 
 /**
  * @ORM\Entity
@@ -33,7 +34,6 @@ class Kategoria
 
     /**
      * @ORM\Column(type="datetime")
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $createat;
 
@@ -43,6 +43,7 @@ class Kategoria
     public function __construct()
     {
         $this->wpisy = new ArrayCollection();
+        $this->createat = new \DateTime();
     }
 
     /**

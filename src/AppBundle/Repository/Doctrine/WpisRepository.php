@@ -15,6 +15,13 @@ class WpisRepository extends DoctrineRepository
             ->findBy([], ['temat' => 'ASC']);
     }
 
+    public function getAll()
+    {
+        return $this->getEntityManager()
+            ->getRepository('AppBundle:Wpis')
+            ->findBy([], ['createat' => 'DESC']);
+    }
+
     public function getOneById($id)
     {
         return $this->getEntityManager()

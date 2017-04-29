@@ -46,7 +46,7 @@ class DodajKategorieController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $this->kategoriaRepository->save($kategoria);
 
-            return $this->redirectToRoute('kategoriadodana');
+            return $this->redirectToRoute('dodajkategorie');
         }
 
         $find = $this->getDoctrine()

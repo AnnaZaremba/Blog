@@ -3,13 +3,23 @@
     <div class="container">
         <div class="row">
             <h2>{{ kategoria.nazwa }}</h2>
-            <div id="lista">
-                <ul class="list-unstyled">
-                    {% for wpis in wpisy %}
-                        <li><a href="{{ path('wpisid', { 'id': wpis.id }) }}">{{ wpis.temat }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
+            {% for wpis in wpisy %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2><a href="{{ path('wpisid', { 'id': wpis.id }) }}">{{ wpis.temat }}</a></h2>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>{{ wpis.createat|date('Y-m-d H:i:s') }}</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>{{ wpis.tresc|raw }}</h4>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

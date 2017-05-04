@@ -3,7 +3,6 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Repository\Doctrine\KategoriaRepository;
-use AppBundle\Repository\Doctrine\WpisRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -16,17 +15,12 @@ class KategorieController extends Controller
     /** @var KategoriaRepository */
     private $kategoriaRepository;
 
-    /** @var WpisRepository */
-    private $wpisRepository;
-
     /**
      * @param KategoriaRepository $kategoriaRepository
-     * @param WpisRepository $wpisRepository
      */
-    public function __construct(KategoriaRepository $kategoriaRepository, WpisRepository $wpisRepository)
+    public function __construct(KategoriaRepository $kategoriaRepository)
     {
         $this->kategoriaRepository = $kategoriaRepository;
-        $this->wpisRepository = $wpisRepository;
     }
 
     /**
